@@ -24,18 +24,27 @@ return {
         claude = {
           endpoint = "https://api.anthropic.com",
           model = "claude-sonnet-4-20250514",
-          -- temperature and max_tokens moved to provider-specific config
+          extra = {
+            temperature = 0,
+            max_tokens = 4096,
+          },
         },
         openai = {
           endpoint = "https://api.openai.com/v1",
           model = "gpt-4o",
-          -- temperature and max_tokens moved to provider-specific config
+          extra = {
+            temperature = 0,
+            max_tokens = 4096,
+          },
         },
         azure = {
           endpoint = "https://api.cognitive.microsoft.com",
           deployment = "gpt-4o",
           api_version = "2024-06-01",
-          -- temperature and max_tokens moved to provider-specific config
+          extra = {
+            temperature = 0,
+            max_tokens = 4096,
+          },
         },
         copilot = {
           endpoint = "https://api.githubcopilot.com",
@@ -44,22 +53,6 @@ return {
           allow_insecure = false,
           timeout = 30000,
         },
-      },
-      
-      -- Global provider settings (replaces deprecated individual provider settings)
-      claude = {
-        temperature = 0,
-        max_tokens = 4096,
-      },
-      
-      openai = {
-        temperature = 0,
-        max_tokens = 4096,
-      },
-      
-      azure = {
-        temperature = 0,
-        max_tokens = 4096,
       },
       
       -- Behavior settings
