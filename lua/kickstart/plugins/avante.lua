@@ -147,7 +147,7 @@ return {
       
       -- File exclusions
       file_selector = {
-        provider = "native", -- native, fzf, telescope
+        provider = "telescope", -- native, fzf, telescope
         provider_opts = {},
       },
     },
