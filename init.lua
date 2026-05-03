@@ -881,6 +881,10 @@ require('lazy').setup({
     lazy = false,
     build = ':TSUpdate',
     branch = 'main',
+    -- Pinned: commits after c82bf96f require Neovim 0.12 (use vim.list.unique).
+    -- 7caec274 is the last commit compatible with Neovim 0.11.
+    -- Remove this `commit =` line once you upgrade to Neovim 0.12+.
+    commit = '7caec274',
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
     config = function()
       -- ensure basic parser are installed
